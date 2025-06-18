@@ -6,7 +6,6 @@ import numpy as np
 st.title("Single Variable Function Plotter")
 st.write("")
 st.write("")
-
 #st.write('Kira jumlah dua nombor dengan kalkulator ini!')
 # Input dari user
 #num1 = st.number_input("Nombor pertama", value=0)
@@ -55,7 +54,7 @@ x = np.linspace(x_min, x_max, 100)
 if graf1 and graf2:
     try: # kena guna try-except untuk tangkap error kalau ada masalah dengan input user
         y1 = eval(graf1, {"x": x, "np": np}) #eval digunakan untuk menilai string sebagai kod Python.
-        y2 = eval(graf2, {"x": x, "np": np})
+        y2 = eval(graf2, {"x": x, "np": np}) #eval ni nilai string sebagai kod Python, jadi kita boleh masukkan fungsi matematik dalam bentuk string.
 
     # ni kita plot graft dulu sebelum kita kira titik pertembungan
         plt.figure()
@@ -80,6 +79,9 @@ if graf1 and graf2:
 
     except Exception as e:
         st.error(f"Error dalam formula: {e}")
-   
 
 
+#kalau nak view dkt streamlit follow step ni: 
+# 1. Buka terminal type cd "Test Create Empth File"
+# 2. Type streamlit run kalkulator_streamlit.py
+# nnti terus keluar browser dengan localhost:8501(nama website untuk view streamlit)

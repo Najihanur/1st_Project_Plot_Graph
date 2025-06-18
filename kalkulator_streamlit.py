@@ -4,6 +4,8 @@ import numpy as np
 
 
 st.title("Single Variable Function Plotter")
+st.write("")
+st.write("")
 
 #st.write('Kira jumlah dua nombor dengan kalkulator ini!')
 # Input dari user
@@ -23,8 +25,14 @@ st.title("Single Variable Function Plotter")
 #    unsafe_allow_html=True
 #)
 
-graf1 = st.text_input("Please enter your first equation: (ex: x**2 + 4*x + 5)")
-graf2 = st.text_input("Please enter your second equation: (ex: 2*x + 5)")
+graf1 = st.text_input("Please enter your first equation:")
+st.caption("Note: Use ** for powers. For example: x**2. The variable used in the equations must only 'x' and in the lowercase.")
+st.write("")
+st.write("")
+graf2 = st.text_input("Please enter your second equation:")
+st.caption("Note: Use ** for powers. For example: x**2. The variable used in the equations must only 'x' and in the lowercase.")
+st.write("")
+st.write("")
 # dlm bahasa python, ** bermaksud 'kuasa' atau 'exponentiation', jadi x**2 bermaksud x kuasa 2 (x^2).
 # menurut konvensyen Python, kita guna ** untuk kuasa, bukan ^. tak boleh guna ^ sebab itu untuk operasi bitwise XOR dalam Python.
 
